@@ -1,0 +1,228 @@
+@import url('./animation.css');
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f92d2d;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background: #2fdcef;
+    /* background-color: rgba(50, 46, 255, 0);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); */
+    align-items: center;
+    position: fixed;
+}
+.header .main-nav{
+    margin-left: 80px;
+    padding: 15px;
+}
+header ul{
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    display: flex;
+    color: black;
+}
+header ul li a:hover{
+    scale: 1.1;
+    color: blue;
+    text-decoration: underline 1px;
+    text-underline-offset: 4px;
+}
+header .auth-nav{
+    margin-right: 80px;
+    padding: 10px;
+    gap: 60px;
+}
+
+header .auth-nav li a{
+    padding: 5px 10px;
+    /* border: 1px solid rgba(119, 119, 119, 0.747); */
+    border-radius: 5px;
+    color: #ffffff;
+    animation: gradient 3.6s linear infinite;
+}
+
+
+header .auth-nav li a:hover{
+    scale: 1.2;
+    background: linear-gradient(35deg,rgb(42, 72, 245),rgb(130, 234, 240));
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+}
+
+main{
+    padding: 60px 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(50, 46, 255, 0);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Login, Signup */
+.login,
+.signup {
+    /* margin: 20px 40px; */
+    z-index: 1000;
+    position: absolute;
+    /* left: 450px; */
+    top: 200px;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 10px;
+    min-height: 300px;
+    width: 400px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    animation: box-color 3s linear infinite;
+    display: none;
+}
+
+.login h2,
+.signup h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login form,
+.signup form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.login form .form-group,
+.signup form .form-group {
+    margin-bottom: 10px;
+}
+
+.login form label,
+.signup form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.login form input,
+.signup form input,
+.login form textarea,
+.login form select {
+    width: 360px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login form textarea,
+.signup form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.login form button,
+.signup form button
+{
+    padding: 8px 16px;
+    /* background: linear-gradient(36deg, rgb(42, 181, 245),rgb(139, 255, 139)); */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    animation: gradient 3.6s linear infinite;
+}
+
+.login form button:hover,
+.signup form button:hover
+{
+    /* background: linear-gradient(-146deg, rgb(42, 181, 245),rgb(139, 255, 139)); */
+    border: 1px solid red;
+}
+
+.login p,
+.signup p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+}
+
+.login p a,
+.signup p a {
+    background: linear-gradient(36deg, rgb(42, 181, 245),rgb(139, 255, 139));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login p a:hover,
+.signup p a:hover {
+    text-decoration: underline;
+    background: linear-gradient(-146deg, rgb(42, 181, 245),rgb(139, 255, 139));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.login input:focus,
+.signup input:focus
+{
+    outline: 1px solid transparent;
+    animation: box-color 3s linear infinite;
+}
+
+.forgot-password {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    background: linear-gradient(36deg, rgb(42, 181, 245),rgb(139, 255, 139));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    background: linear-gradient(-146deg, rgb(42, 181, 245),rgb(139, 255, 139));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.cross{
+    height: 30px;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    filter: brightness(0) invert();
+    cursor: pointer;
+}
