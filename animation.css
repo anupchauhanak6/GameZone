@@ -106,7 +106,7 @@
 /* card */
 @keyframes box-color {
     0%, 100% {
-        border: 1.5px solid red;
+        border: 1.5px solid rgb(255, 0, 242);
     }
     50% {
         border: 1.5px solid rgb(0, 255, 0);
